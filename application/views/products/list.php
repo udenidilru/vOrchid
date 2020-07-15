@@ -21,7 +21,7 @@
     <h2>Products</h2>
    </div>
    <div class="col-md-2">
-    <a href="<?php echo base_url('index.php/Products/create/') ?>" class="btn btn-danger">Add Note</a>
+    <a href="<?php echo base_url('index.php/Products/create/') ?>" class="btn btn-primary">Add Note</a>
    </div>
    <br><br>
  
@@ -32,7 +32,7 @@
              <th>Name</th>
              <th>Category</th>
              <th>Description</th>
-             <th>Image</th>
+             <!-- <th>Image</th> -->
              <th>Unit_Price</th>
              <td colspan="2">Action</td>
           </tr>
@@ -45,7 +45,7 @@
              <td><?php echo $note->name; ?></td>
              <td><?php echo $note->category; ?></td>
              <td><?php echo $note->description; ?></td>
-             <td><?php echo $note->name; ?></td>
+             
              <td><?php echo $note->unit_price; ?></td>
             
                  <td>
