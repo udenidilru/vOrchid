@@ -31,8 +31,14 @@
      <div class="row">
         <div class="col-md-12">
             <div class="form-group">
-                <strong>Title</strong>
-                <input type="text" name="title" class="form-control" placeholder="Enter Title">
+                <strong>Name</strong>
+                <input type="text" name="name" class="form-control" placeholder="Enter Name">
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="form-group">
+                <strong>Category</strong>
+                <input type="text" name="category" class="form-control" placeholder="Enter Category">
             </div>
         </div>
         <div class="col-md-12">
@@ -42,10 +48,23 @@
                  placeholder="Enter Description"></textarea>
             </div>
         </div>
+        <!-- <div class="choose-img form-group">
+							<label for="userimage">Select Profile Picture</label>
+							<input class="form-control" onchange="readURL(this);" type="file" name="userimage" size="20 " value="<?php echo set_value('userimg'); ?>" required>
+						</div> -->
+        <div class="col-md-12">
+            <div class="form-group">
+                <strong>Unit Price</strong>
+                <input type="number" name="unit_price" class="form-control" placeholder="Enter Unit Price">
+            </div>
+        </div>
         <div class="col-md-12">
                 <button type="submit" class="btn btn-primary">Submit</button>
         </div>
     </div>
+
+
+
     </form>
  
 </div>

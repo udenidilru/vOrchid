@@ -108,8 +108,10 @@ class Products extends CI_Controller {
     public function store()
     {
  
-        $this->form_validation->set_rules('title', 'Title', 'required');
+        $this->form_validation->set_rules('name', 'Name', 'required');
+        $this->form_validation->set_rules('category', 'Category', 'required');
         $this->form_validation->set_rules('description', 'Description', 'required');
+        $this->form_validation->set_rules('unit_price', 'Unit_Price', 'required');
  
         $id = $this->input->post('id');
  

@@ -8,13 +8,13 @@ class Product_Model extends CI_Model {
      
     public function products_list()
     {
-        $query = $this->db->get('notes');
+        $query = $this->db->get('product');
         return $query->result();
     }
      
     public function get_products_by_id($id)
     {
-        $query = $this->db->get_where('notes', array('id' => $id));
+        $query = $this->db->get_where('product', array('id' => $id));
         return $query->row();
     }
      
@@ -24,20 +24,22 @@ class Product_Model extends CI_Model {
         $id = $this->input->post('id');
  
         $data = array(
-            'title' => $this->input->post('title'),
-            'description' => $this->input->post('description')
+            'name' => $this->input->post('name'),
+            'category' => $this->input->post('category'),
+            'description' => $this->input->post('description'),
+            'unit_price' => $this->input->post('unit_price'),
         );
         if (empty($id)) {
-            return $this->db->insert('notes', $data);
+            return $this->db->insert('product', $data);
         } else {
             $this->db->where('id', $id);
-            return $this->db->update('notes', $data);
+            return $this->db->update('product', $data);
         }
     }
      
     public function delete($id)
     {
         $this->db->where('id', $id);
-        return $this->db->delete('notes');
+        return $this->db->delete('product');
     }
 }

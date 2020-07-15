@@ -29,9 +29,11 @@
        <thead>
           <tr>
              <th>Id</th>
-             <th>Title</th>
+             <th>Name</th>
+             <th>Category</th>
              <th>Description</th>
-             <th>Created at</th>
+             <th>Image</th>
+             <th>Unit_Price</th>
              <td colspan="2">Action</td>
           </tr>
        </thead>
@@ -40,12 +42,17 @@
           <?php foreach($notes as $note): ?>
           <tr>
              <td><?php echo $note->id; ?></td>
-             <td><?php echo $note->title; ?></td>
+             <td><?php echo $note->name; ?></td>
+             <td><?php echo $note->category; ?></td>
              <td><?php echo $note->description; ?></td>
-             <td><a href="<?php echo base_url('index.php/Products/edit/'.$note->id) ?>" class="btn btn-primary">Edit</a></td>
+             <td><?php echo $note->name; ?></td>
+             <td><?php echo $note->unit_price; ?></td>
+            
                  <td>
+                 
                 <form action="<?php echo base_url('index.php/Products/delete/'.$note->id) ?>" method="post">
-                  <button class="btn btn-danger" type="submit">Delete</button>
+                <a href="<?php echo base_url('index.php/Products/edit/'.$note->id) ?>" class="btn btn-primary">Edit</a>  
+                <button class="btn btn-danger" type="submit">Delete</button>
                 </form>
             </td>
           </tr>

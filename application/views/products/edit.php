@@ -31,15 +31,28 @@
      <div class="row">
         <div class="col-md-12">
             <div class="form-group">
-                <strong>Title</strong>
-                <input type="text" name="title" class="form-control" value="<?php echo $note->title ?>" placeholder="Enter Title">
+                <strong>Name</strong>
+                <input type="text" name="name" class="form-control" value="<?php echo $note->name ?>" placeholder="Enter Name">
             </div>
         </div>
+        <div class="col-md-12">
+            <div class="form-group">
+                <strong>Category</strong>
+                <input type="text" name="category" class="form-control" value="<?php echo $note->category ?>" placeholder="Enter Category">
+            </div>
+        </div>
+        
         <div class="col-md-12">
             <div class="form-group">
                 <strong>Description</strong>
                 <textarea class="form-control" col="4" name="description"
                  placeholder="Enter Description"><?php echo $note->description ?></textarea>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="form-group">
+                <strong>Unit Price</strong>
+                <input type="number" name="unit_price" class="form-control" value="<?php echo $note->unit_price ?>" placeholder="Enter Unit Price">
             </div>
         </div>
         <div class="col-md-12">
