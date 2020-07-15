@@ -38,6 +38,7 @@ class Note extends CI_Controller {
  
         $this -> load -> view('Templates/Dashboard_Header', $data);
         $this->load->view('notes/list', $data);
+        $this -> load -> view('Templates/Dashboard_Footer');
     }
 }
   
@@ -65,6 +66,7 @@ class Note extends CI_Controller {
  
         $this -> load -> view('Templates/Dashboard_Header', $data);
         $this->load->view('notes/create', $data);
+        $this -> load -> view('Templates/Dashboard_Footer');
     }
 }
       
@@ -78,8 +80,30 @@ class Note extends CI_Controller {
          show_404();
         }else{
           $data['note'] = $this->notes_model->get_notes_by_id($id);
+          if($this->session->userdata('id') != null){
+
+            $data['page_title'] = 'Dashboard';
+            $data['admins'] = $this->admin_model->getAdminProfiles();
+
+            // Getting the Data From the Session
+            $data['currUser'] = array(
+                'id' => $this->session->userdata('id'),
+                'firstname' => $this->session->userdata('firstname'),
+                'lastname' => $this->session->userdata('lastname'),
+                'role' => $this->session->userdata('role'),
+                'email' => $this->session->userdata('email'),
+                'imgurl' =>$this->session->userdata('imgurl')
+            );
+
+            // Getting the unread message count
+            $data['msgCount'] = $this->Message_Model->getUnreadMessageCount();
+            $data['messages'] = $this->Message_Model->getUnreadMessage();
+ 
+        $this -> load -> view('Templates/Dashboard_Header', $data);
           $this->load->view('notes/edit', $data);
+          $this -> load -> view('Templates/Dashboard_Footer');
         }
+    }
     }
     public function store()
     {

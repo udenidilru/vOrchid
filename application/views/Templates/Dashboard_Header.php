@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="<?= base_url()?>css/chart/morris.css">
   <link rel="stylesheet" href="<?= base_url()?>css/dashboard.css">
 
-
+<link rel="stylesheet" href="https://bootswatch.com/4/flatly/bootstrap.min.css">
 	
 
 </head>
@@ -62,7 +62,7 @@
       
       <!-- Nav Item - Administrator Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseAdmin" aria-expanded="true" aria-controls="collapseUtilities">
+        <a class="nav-link collapsed" href="http://[::1]/Vorchid/index.php/admin" data-toggle="collapse" data-target="#collapseAdmin" aria-expanded="true" aria-controls="collapseUtilities">
           <i class="fas fa-fw fa-user-cog"></i>
           <span>Admin</span>
         </a>
@@ -82,7 +82,7 @@
 
       <!-- Nav Item - Products Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseProduct" aria-expanded="true" aria-controls="collapseUtilities">
+        <a class="nav-link collapsed" href="http://[::1]/Vorchid/index.php/note" data-toggle="collapse" data-target="#collapseProduct" aria-expanded="true" aria-controls="collapseUtilities">
           <i class="fas fa-fw fa-wrench"></i>
           <span>Products</span>
         </a>
