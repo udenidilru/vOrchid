@@ -20,13 +20,13 @@
 <div class="row">
     <div class="col-lg-12 mt40">
         <div class="pull-left">
-            <h2>Edit Note</h2>
+            <h2>Edit Products</h2>
         </div>
     </div>
 </div>
      
      
-<form action="<?php echo base_url('index.php/note/store') ?>" method="POST" name="edit_note">
+<form action="<?php echo base_url('index.php/Products/store') ?>" method="POST" name="edit_note">
    <input type="hidden" name="id" value="<?php echo $note->id ?>">
      <div class="row">
         <div class="col-md-12">

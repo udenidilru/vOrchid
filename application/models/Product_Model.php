@@ -1,18 +1,18 @@
 <?php
-class Notes_model extends CI_Model {
+class Product_Model extends CI_Model {
   
     public function __construct()
     {
         $this->load->database();
     }
      
-    public function notes_list()
+    public function products_list()
     {
         $query = $this->db->get('notes');
         return $query->result();
     }
      
-    public function get_notes_by_id($id)
+    public function get_products_by_id($id)
     {
         $query = $this->db->get_where('notes', array('id' => $id));
         return $query->row();

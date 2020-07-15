@@ -82,7 +82,7 @@
 
       <!-- Nav Item - Products Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="http://[::1]/Vorchid/index.php/note" data-toggle="collapse" data-target="#collapseProduct" aria-expanded="true" aria-controls="collapseUtilities">
+        <a class="nav-link collapsed" href="http://[::1]/Vorchid/index.php/Products" data-toggle="collapse" data-target="#collapseProduct" aria-expanded="true" aria-controls="collapseUtilities">
           <i class="fas fa-fw fa-wrench"></i>
           <span>Products</span>
         </a>

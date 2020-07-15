@@ -1,12 +1,12 @@
 <?php
-class Note extends CI_Controller {
+class Products extends CI_Controller {
   
     public function __construct()
     {
         parent::__construct();
         $this->load->model('admin_model');
 		$this->load->model('Message_Model');
-        $this->load->model('notes_model');
+        $this->load->model('Product_Model');
         $this->load->helper('url_helper');
         $this->load->helper('form');
         $this->load->library('form_validation');
@@ -15,8 +15,8 @@ class Note extends CI_Controller {
   
     public function index()
     {
-        $data['notes'] = $this->notes_model->notes_list();
-        $data['title'] = 'Notes List';
+        $data['notes'] = $this->Product_Model->products_list();
+        $data['title'] = 'Products List';
         if($this->session->userdata('id') != null){
 
             $data['page_title'] = 'Dashboard';
@@ -37,14 +37,14 @@ class Note extends CI_Controller {
             $data['messages'] = $this->Message_Model->getUnreadMessage();
  
         $this -> load -> view('Templates/Dashboard_Header', $data);
-        $this->load->view('notes/list', $data);
+        $this->load->view('products/list', $data);
         $this -> load -> view('Templates/Dashboard_Footer');
     }
 }
   
     public function create()
     {
-        $data['title'] = 'Create Note';
+        $data['title'] = 'Create Products';
         if($this->session->userdata('id') != null){
 
             $data['page_title'] = 'Dashboard';
@@ -65,7 +65,7 @@ class Note extends CI_Controller {
             $data['messages'] = $this->Message_Model->getUnreadMessage();
  
         $this -> load -> view('Templates/Dashboard_Header', $data);
-        $this->load->view('notes/create', $data);
+        $this->load->view('products/create', $data);
         $this -> load -> view('Templates/Dashboard_Footer');
     }
 }
@@ -79,7 +79,7 @@ class Note extends CI_Controller {
         { 
          show_404();
         }else{
-          $data['note'] = $this->notes_model->get_notes_by_id($id);
+          $data['note'] = $this->Product_Model->get_products_by_id($id);
           if($this->session->userdata('id') != null){
 
             $data['page_title'] = 'Dashboard';
@@ -100,7 +100,7 @@ class Note extends CI_Controller {
             $data['messages'] = $this->Message_Model->getUnreadMessage();
  
         $this -> load -> view('Templates/Dashboard_Header', $data);
-          $this->load->view('notes/edit', $data);
+          $this->load->view('products/edit', $data);
           $this -> load -> view('Templates/Dashboard_Footer');
         }
     }
@@ -116,15 +116,15 @@ class Note extends CI_Controller {
         if ($this->form_validation->run() === FALSE)
         {  
             if(empty($id)){
-              redirect( base_url('index.php/note/create') ); 
+              redirect( base_url('index.php/Products/create') ); 
             }else{
-             redirect( base_url('index.php/note/edit/'.$id) ); 
+             redirect( base_url('index.php/Products/edit/'.$id) ); 
             }
         }
         else
         {
-            $data['note'] = $this->notes_model->createOrUpdate();
-            redirect( base_url('index.php/note') ); 
+            $data['note'] = $this->Product_Model->createOrUpdate();
+            redirect( base_url('index.php/Products') ); 
         }
          
     }
@@ -139,8 +139,8 @@ class Note extends CI_Controller {
             show_404();
         }
                  
-        $notes = $this->notes_model->delete($id);
+        $notes = $this->Product_Model->delete($id);
          
-        redirect( base_url('index.php/note') );        
+        redirect( base_url('index.php/Products') );        
     }
 }
