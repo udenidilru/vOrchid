@@ -53,7 +53,7 @@
       <li class="nav-item">
         <a class="nav-link" href="<?= site_url('Dashboard')?>">
           <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Dashboard</span></a>
+          <span>Home</span></a>
       </li>
 
       <!-- Divider -->
@@ -64,7 +64,7 @@
       <li class="nav-item">
         <a class="nav-link collapsed" href="http://[::1]/Vorchid/index.php/admin" data-toggle="collapse" data-target="#collapseAdmin" aria-expanded="true" aria-controls="collapseUtilities">
           <i class="fas fa-fw fa-user-cog"></i>
-          <span>Admin</span>
+          <span>User</span>
         </a>
         <div id="collapseAdmin" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
@@ -84,7 +84,7 @@
       <li class="nav-item">
         <a class="nav-link collapsed" href="http://[::1]/Vorchid/index.php/Products" data-toggle="collapse" data-target="#collapseProduct" aria-expanded="true" aria-controls="collapseUtilities">
           <i class="fas fa-fw fa-wrench"></i>
-          <span>Products</span>
+          <span>Gallery</span>
         </a>
         <div id="collapseProduct" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
@@ -104,7 +104,7 @@
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSales" aria-expanded="true" aria-controls="collapseSales">
           <i class="fas fa-fw fa-wrench"></i>
-          <span>Sales</span>
+          <span>About</span>
         </a>
         <div id="collapseSales" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
@@ -125,7 +125,7 @@
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseBuyers" aria-expanded="true" aria-controls="collapseUtilities">
           <i class="fas fa-fw fa-wrench"></i>
-          <span>Buyers</span>
+          <span>Contacts</span>
         </a>
         <div id="collapseBuyers" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
@@ -142,9 +142,9 @@
 
 			 <!-- Nav Item - Messages Collapse Menu -->
 			 <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseMessages" aria-expanded="true" aria-controls="collapseUtilities">
+        <a class="nav-link collapsed" href="http://[::1]/Vorchid/index.php/feedback/create" data-toggle="collapse" data-target="#collapseMessages" aria-expanded="true" aria-controls="collapseUtilities">
           <i class="fas fa-fw fa-wrench"></i>
-          <span>Messages</span>
+          <span>Feedback</span>
         </a>
         <div id="collapseMessages" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
@@ -160,8 +160,8 @@
       <hr class="sidebar-divider">
 
       <!-- Nav Item - Inquary Collapse Menu -->
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="http://[::1]/Vorchid/index.php/Feedback" data-toggle="collapse" data-target="#collapseInquary" aria-expanded="true" aria-controls="collapseUtilities">
+      <!-- <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseInquary" aria-expanded="true" aria-controls="collapseUtilities">
           <i class="fas fa-fw fa-wrench"></i>
           <span>Inquaries</span>
         </a>
@@ -174,13 +174,13 @@
             <a class="collapse-item" href="utilities-other.html">Delete</a>
           </div>
         </div>
-      </li>
+      </li> -->
 
       <!-- Divider -->
-      <hr class="sidebar-divider">
+      <!-- <hr class="sidebar-divider"> -->
 
       <!-- Nav Item - Stock Collapse Menu -->
-      <li class="nav-item">
+      <!-- <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseStock" aria-expanded="true" aria-controls="collapseUtilities">
           <i class="fas fa-fw fa-wrench"></i>
           <span>Stock</span>
@@ -193,7 +193,7 @@
             <a class="collapse-item" href="utilities-color.html">Report</a>
           </div>
         </div>
-      </li>
+      </li> -->
       
 
       
@@ -362,8 +362,8 @@
             <!-- Nav Item - User Information -->
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?= $currUser['firstname'] . " " . $currUser['lastname']?></span>
-                <img class="img-profile rounded-circle" src="<?= base_url() . $currUser['imgurl']?>">
+                <!-- <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?= $currUser['firstname'] . " " . $currUser['lastname']?></span>
+                <img class="img-profile rounded-circle" src=" <?= base_url() . $currUser['imgurl']?>"> -->
               </a>
               <!-- Dropdown - User Information -->
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">

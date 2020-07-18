@@ -13,7 +13,7 @@
 			$this->load->helper('url'); //To Redirect the Page
 			$this->load->helper(array('form'));
 
-			$this->load->model('User_Model');
+			$this->load->model('Login_Model');
 			$this->load->model('Admin_model');
 
 			$this->load->library('form_validation');
@@ -52,7 +52,7 @@
 			}
 			else{
 			
-				$user = $this->User_Model->findUserByEmailAndPassword();
+				$user = $this->Login_Model->findUserByEmailAndPassword();
 				if($user != null){
 					if($user['role'] == "System Admin"){
 
@@ -77,7 +77,7 @@
 					else if($user['role'] == "General User"){
 
 						$id = $user['user_id'];
-						$data = $this->User_Model->getUserProfile($id);
+						$data = $this->Login_Model->getUserProfile($id);
 
 						$currUser = array(
 							'id' => $id,
